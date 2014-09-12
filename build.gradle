@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.7
+version = '1.0'
+group = "com.github.bjoern2"
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'java-menu-resolver', 'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           //dirs 'repos'
+           dirs 'c:/develop/ivy'
+       }
+    }
+}
